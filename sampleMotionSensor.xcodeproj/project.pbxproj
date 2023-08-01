@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23851B3F2A792EFD00D05B1C /* sampleMotionSensorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23851B3E2A792EFD00D05B1C /* sampleMotionSensorApp.swift */; };
+		23851B412A792EFD00D05B1C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23851B402A792EFD00D05B1C /* ContentView.swift */; };
+		23851B432A792EFD00D05B1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23851B422A792EFD00D05B1C /* Assets.xcassets */; };
+		23851B462A792EFD00D05B1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23851B452A792EFD00D05B1C /* Preview Assets.xcassets */; };
+		23851B482A792EFD00D05B1C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23851B472A792EFD00D05B1C /* Persistence.swift */; };
+		23851B4B2A792EFD00D05B1C /* sampleMotionSensor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23851B492A792EFD00D05B1C /* sampleMotionSensor.xcdatamodeld */; };
+		23851B552A792EFE00D05B1C /* sampleMotionSensorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23851B542A792EFE00D05B1C /* sampleMotionSensorTests.swift */; };
+		23851B5F2A792EFE00D05B1C /* sampleMotionSensorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23851B5E2A792EFE00D05B1C /* sampleMotionSensorUITests.swift */; };
+		23851B612A792EFE00D05B1C /* sampleMotionSensorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23851B602A792EFE00D05B1C /* sampleMotionSensorUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23851B512A792EFE00D05B1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23851B332A792EFC00D05B1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23851B3A2A792EFD00D05B1C;
+			remoteInfo = sampleMotionSensor;
+		};
+		23851B5B2A792EFE00D05B1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23851B332A792EFC00D05B1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23851B3A2A792EFD00D05B1C;
+			remoteInfo = sampleMotionSensor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		23851B3B2A792EFD00D05B1C /* sampleMotionSensor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleMotionSensor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23851B3E2A792EFD00D05B1C /* sampleMotionSensorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleMotionSensorApp.swift; sourceTree = "<group>"; };
+		23851B402A792EFD00D05B1C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		23851B422A792EFD00D05B1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23851B452A792EFD00D05B1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		23851B472A792EFD00D05B1C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		23851B4A2A792EFD00D05B1C /* sampleMotionSensor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sampleMotionSensor.xcdatamodel; sourceTree = "<group>"; };
+		23851B502A792EFE00D05B1C /* sampleMotionSensorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampleMotionSensorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23851B542A792EFE00D05B1C /* sampleMotionSensorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleMotionSensorTests.swift; sourceTree = "<group>"; };
+		23851B5A2A792EFE00D05B1C /* sampleMotionSensorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampleMotionSensorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23851B5E2A792EFE00D05B1C /* sampleMotionSensorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleMotionSensorUITests.swift; sourceTree = "<group>"; };
+		23851B602A792EFE00D05B1C /* sampleMotionSensorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleMotionSensorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23851B382A792EFD00D05B1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23851B4D2A792EFE00D05B1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23851B572A792EFE00D05B1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23851B322A792EFC00D05B1C = {
+			isa = PBXGroup;
+			children = (
+				23851B3D2A792EFD00D05B1C /* sampleMotionSensor */,
+				23851B532A792EFE00D05B1C /* sampleMotionSensorTests */,
+				23851B5D2A792EFE00D05B1C /* sampleMotionSensorUITests */,
+				23851B3C2A792EFD00D05B1C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23851B3C2A792EFD00D05B1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23851B3B2A792EFD00D05B1C /* sampleMotionSensor.app */,
+				23851B502A792EFE00D05B1C /* sampleMotionSensorTests.xctest */,
+				23851B5A2A792EFE00D05B1C /* sampleMotionSensorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23851B3D2A792EFD00D05B1C /* sampleMotionSensor */ = {
+			isa = PBXGroup;
+			children = (
+				23851B3E2A792EFD00D05B1C /* sampleMotionSensorApp.swift */,
+				23851B402A792EFD00D05B1C /* ContentView.swift */,
+				23851B422A792EFD00D05B1C /* Assets.xcassets */,
+				23851B472A792EFD00D05B1C /* Persistence.swift */,
+				23851B492A792EFD00D05B1C /* sampleMotionSensor.xcdatamodeld */,
+				23851B442A792EFD00D05B1C /* Preview Content */,
+			);
+			path = sampleMotionSensor;
+			sourceTree = "<group>";
+		};
+		23851B442A792EFD00D05B1C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				23851B452A792EFD00D05B1C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		23851B532A792EFE00D05B1C /* sampleMotionSensorTests */ = {
+			isa = PBXGroup;
+			children = (
+				23851B542A792EFE00D05B1C /* sampleMotionSensorTests.swift */,
+			);
+			path = sampleMotionSensorTests;
+			sourceTree = "<group>";
+		};
+		23851B5D2A792EFE00D05B1C /* sampleMotionSensorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				23851B5E2A792EFE00D05B1C /* sampleMotionSensorUITests.swift */,
+				23851B602A792EFE00D05B1C /* sampleMotionSensorUITestsLaunchTests.swift */,
+			);
+			path = sampleMotionSensorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23851B3A2A792EFD00D05B1C /* sampleMotionSensor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23851B642A792EFE00D05B1C /* Build configuration list for PBXNativeTarget "sampleMotionSensor" */;
+			buildPhases = (
+				23851B372A792EFD00D05B1C /* Sources */,
+				23851B382A792EFD00D05B1C /* Frameworks */,
+				23851B392A792EFD00D05B1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sampleMotionSensor;
+			productName = sampleMotionSensor;
+			productReference = 23851B3B2A792EFD00D05B1C /* sampleMotionSensor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		23851B4F2A792EFE00D05B1C /* sampleMotionSensorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23851B672A792EFE00D05B1C /* Build configuration list for PBXNativeTarget "sampleMotionSensorTests" */;
+			buildPhases = (
+				23851B4C2A792EFE00D05B1C /* Sources */,
+				23851B4D2A792EFE00D05B1C /* Frameworks */,
+				23851B4E2A792EFE00D05B1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23851B522A792EFE00D05B1C /* PBXTargetDependency */,
+			);
+			name = sampleMotionSensorTests;
+			productName = sampleMotionSensorTests;
+			productReference = 23851B502A792EFE00D05B1C /* sampleMotionSensorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		23851B592A792EFE00D05B1C /* sampleMotionSensorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23851B6A2A792EFE00D05B1C /* Build configuration list for PBXNativeTarget "sampleMotionSensorUITests" */;
+			buildPhases = (
+				23851B562A792EFE00D05B1C /* Sources */,
+				23851B572A792EFE00D05B1C /* Frameworks */,
+				23851B582A792EFE00D05B1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23851B5C2A792EFE00D05B1C /* PBXTargetDependency */,
+			);
+			name = sampleMotionSensorUITests;
+			productName = sampleMotionSensorUITests;
+			productReference = 23851B5A2A792EFE00D05B1C /* sampleMotionSensorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23851B332A792EFC00D05B1C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					23851B3A2A792EFD00D05B1C = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					23851B4F2A792EFE00D05B1C = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 23851B3A2A792EFD00D05B1C;
+					};
+					23851B592A792EFE00D05B1C = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 23851B3A2A792EFD00D05B1C;
+					};
+				};
+			};
+			buildConfigurationList = 23851B362A792EFC00D05B1C /* Build configuration list for PBXProject "sampleMotionSensor" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23851B322A792EFC00D05B1C;
+			productRefGroup = 23851B3C2A792EFD00D05B1C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23851B3A2A792EFD00D05B1C /* sampleMotionSensor */,
+				23851B4F2A792EFE00D05B1C /* sampleMotionSensorTests */,
+				23851B592A792EFE00D05B1C /* sampleMotionSensorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23851B392A792EFD00D05B1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23851B462A792EFD00D05B1C /* Preview Assets.xcassets in Resources */,
+				23851B432A792EFD00D05B1C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23851B4E2A792EFE00D05B1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23851B582A792EFE00D05B1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23851B372A792EFD00D05B1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23851B482A792EFD00D05B1C /* Persistence.swift in Sources */,
+				23851B4B2A792EFD00D05B1C /* sampleMotionSensor.xcdatamodeld in Sources */,
+				23851B412A792EFD00D05B1C /* ContentView.swift in Sources */,
+				23851B3F2A792EFD00D05B1C /* sampleMotionSensorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23851B4C2A792EFE00D05B1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23851B552A792EFE00D05B1C /* sampleMotionSensorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23851B562A792EFE00D05B1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23851B612A792EFE00D05B1C /* sampleMotionSensorUITestsLaunchTests.swift in Sources */,
+				23851B5F2A792EFE00D05B1C /* sampleMotionSensorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23851B522A792EFE00D05B1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23851B3A2A792EFD00D05B1C /* sampleMotionSensor */;
+			targetProxy = 23851B512A792EFE00D05B1C /* PBXContainerItemProxy */;
+		};
+		23851B5C2A792EFE00D05B1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23851B3A2A792EFD00D05B1C /* sampleMotionSensor */;
+			targetProxy = 23851B5B2A792EFE00D05B1C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		23851B622A792EFE00D05B1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		23851B632A792EFE00D05B1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23851B652A792EFE00D05B1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"sampleMotionSensor/Preview Content\"";
+				DEVELOPMENT_TEAM = 3YQX667AM4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.musictheater.sampleMotionSensor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23851B662A792EFE00D05B1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"sampleMotionSensor/Preview Content\"";
+				DEVELOPMENT_TEAM = 3YQX667AM4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.musictheater.sampleMotionSensor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		23851B682A792EFE00D05B1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3YQX667AM4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.musictheater.sampleMotionSensorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sampleMotionSensor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sampleMotionSensor";
+			};
+			name = Debug;
+		};
+		23851B692A792EFE00D05B1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3YQX667AM4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.musictheater.sampleMotionSensorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sampleMotionSensor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sampleMotionSensor";
+			};
+			name = Release;
+		};
+		23851B6B2A792EFE00D05B1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3YQX667AM4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.musictheater.sampleMotionSensorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = sampleMotionSensor;
+			};
+			name = Debug;
+		};
+		23851B6C2A792EFE00D05B1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3YQX667AM4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.musictheater.sampleMotionSensorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = sampleMotionSensor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23851B362A792EFC00D05B1C /* Build configuration list for PBXProject "sampleMotionSensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23851B622A792EFE00D05B1C /* Debug */,
+				23851B632A792EFE00D05B1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23851B642A792EFE00D05B1C /* Build configuration list for PBXNativeTarget "sampleMotionSensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23851B652A792EFE00D05B1C /* Debug */,
+				23851B662A792EFE00D05B1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23851B672A792EFE00D05B1C /* Build configuration list for PBXNativeTarget "sampleMotionSensorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23851B682A792EFE00D05B1C /* Debug */,
+				23851B692A792EFE00D05B1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23851B6A2A792EFE00D05B1C /* Build configuration list for PBXNativeTarget "sampleMotionSensorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23851B6B2A792EFE00D05B1C /* Debug */,
+				23851B6C2A792EFE00D05B1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		23851B492A792EFD00D05B1C /* sampleMotionSensor.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				23851B4A2A792EFD00D05B1C /* sampleMotionSensor.xcdatamodel */,
+			);
+			currentVersion = 23851B4A2A792EFD00D05B1C /* sampleMotionSensor.xcdatamodel */;
+			path = sampleMotionSensor.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 23851B332A792EFC00D05B1C /* Project object */;
+}
