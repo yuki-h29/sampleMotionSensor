@@ -16,6 +16,7 @@
 		23851B552A792EFE00D05B1C /* sampleMotionSensorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23851B542A792EFE00D05B1C /* sampleMotionSensorTests.swift */; };
 		23851B5F2A792EFE00D05B1C /* sampleMotionSensorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23851B5E2A792EFE00D05B1C /* sampleMotionSensorUITests.swift */; };
 		23851B612A792EFE00D05B1C /* sampleMotionSensorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23851B602A792EFE00D05B1C /* sampleMotionSensorUITestsLaunchTests.swift */; };
+		23851B6E2A7930C700D05B1C /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23851B6D2A7930C700D05B1C /* LocationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		23851B5A2A792EFE00D05B1C /* sampleMotionSensorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampleMotionSensorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23851B5E2A792EFE00D05B1C /* sampleMotionSensorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleMotionSensorUITests.swift; sourceTree = "<group>"; };
 		23851B602A792EFE00D05B1C /* sampleMotionSensorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleMotionSensorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		23851B6D2A7930C700D05B1C /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				23851B3E2A792EFD00D05B1C /* sampleMotionSensorApp.swift */,
 				23851B402A792EFD00D05B1C /* ContentView.swift */,
+				23851B6D2A7930C700D05B1C /* LocationViewModel.swift */,
 				23851B422A792EFD00D05B1C /* Assets.xcassets */,
 				23851B472A792EFD00D05B1C /* Persistence.swift */,
 				23851B492A792EFD00D05B1C /* sampleMotionSensor.xcdatamodeld */,
@@ -266,6 +269,7 @@
 				23851B482A792EFD00D05B1C /* Persistence.swift in Sources */,
 				23851B4B2A792EFD00D05B1C /* sampleMotionSensor.xcdatamodeld in Sources */,
 				23851B412A792EFD00D05B1C /* ContentView.swift in Sources */,
+				23851B6E2A7930C700D05B1C /* LocationViewModel.swift in Sources */,
 				23851B3F2A792EFD00D05B1C /* sampleMotionSensorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,8 +432,10 @@
 				DEVELOPMENT_TEAM = 3YQX667AM4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "位置情報を取得します";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "アプリ起動中位置情報を取得します";
+				INFOPLIST_KEY_NSMotionUsageDescription = "歩数計測に位置情報を使用します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -457,8 +463,10 @@
 				DEVELOPMENT_TEAM = 3YQX667AM4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "位置情報を取得します";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "アプリ起動中位置情報を取得します";
+				INFOPLIST_KEY_NSMotionUsageDescription = "歩数計測に位置情報を使用します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
