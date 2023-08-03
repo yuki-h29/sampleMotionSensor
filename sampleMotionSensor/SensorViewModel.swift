@@ -13,6 +13,7 @@ import CoreLocation
 class SensorViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     private var locationManager = CLLocationManager()
     private var motionManager = CMMotionManager()
+    var defaultTimerCount: Int?
     
     @Published var latitude: Double = 0.0
     @Published var longitude: Double = 0.0
@@ -22,8 +23,10 @@ class SensorViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var combinedAcceleration: Double = 0.0
     @Published var isMoving: Bool = false
     @Published var isMovingCount: Int = 0 // 動いているカウント
+    @Published var graphPoints: [Double] = []
     
     private var previousAccelerationX: Double? = nil // 以前のX軸の加速度値
+    private var previousAccelerationSum: Double? = nil // 以前のX軸の加速度値
     
     override init() {
         super.init()
@@ -46,9 +49,13 @@ class SensorViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
             if let acceleration = data?.acceleration {
                 DispatchQueue.main.async {
-                    if let previous = self.previousAccelerationX {
-                        let change = abs(acceleration.x - previous) // X軸の変化量
-                        self.isMoving = change > 0.05 // 例: 変化量が0.05以上なら「動いている」と判断
+                    if let previous = self.previousAccelerationSum {
+                        let change = abs(acceleration.z - previous) // X軸の変化量
+                        self.isMoving = change > 0.3 // 例: 変化量が0.05以上なら「動いている」と判断
+                        
+                        // 合計加速度をグラフデータに追加
+                        self.graphPoints.append(self.accelerationZ)
+                        
                     }
                     self.previousAccelerationX = acceleration.x
                     self.accelerationX = acceleration.x
@@ -77,22 +84,19 @@ class SensorViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     // カウントダウンの残り時間
-    @Published var timeRemaining: Int = 0
+    @Published var timeRemaining: Int = 10
     private var timer: Timer?
     
     // CSVに書き込むデータ
     private var csvData: [String] = []
-    
-    
+    // CSVファイルのパス
     private var currentCSVFileURL: URL?
     
+    // 移動中に切り替わった時の処理
     func restartMonitoring(timeInterval: Int) {
         
-        // 既存のタイマーを無効にする
+        // 既存のタイマーを無効にする(多重起動防止)
         timer?.invalidate()
-        
-        // 既存のCSVファイルを保存
-        saveToCSV()
         
         // 新しいCSVファイルの作成
         createNewCSVFile()
@@ -100,16 +104,17 @@ class SensorViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         // 残り時間の初期化
         self.timeRemaining = timeInterval
         
-        // タイマーのセットアップ
+        // タイマーのセットアップ 1秒間隔で呼び出す
         self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
             guard let self = self else { return }
             
             self.timeRemaining -= 1
             
+            // カウントダウンが0になったときの処理
             if self.timeRemaining <= 0 {
-                // カウントダウンが0になったときの処理
+                // CSVデータに追記する
                 self.recordData()
-                self.timeRemaining = 10
+                self.timeRemaining = self.defaultTimerCount ?? 10
             }
         }
     }
@@ -141,12 +146,18 @@ class SensorViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     // CSVをファイルに保存する
     func saveToCSV() {
+        // エラーチェック Pathの存在
         guard let fileURL = currentCSVFileURL else {
-            print("No CSV file to write to.")
+            print("CSVファイルのパスが見つかりませんでした")
             return
         }
         
-        // データをファイルに追記
+        // エラーチェック CSV配列データの数(0なら保存しない)
+        if csvData.count == 0 {
+            return
+        }
+        
+        // データをCSVファイルに追記する
         do {
             let fileHandle = try FileHandle(forWritingTo: fileURL)
             fileHandle.seekToEndOfFile() // ファイルの末尾に移動
@@ -156,24 +167,27 @@ class SensorViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             }
             fileHandle.closeFile()
         } catch {
-            print("Error writing to file: \(error)")
+            print("書き込み中にエラーが発生しました: \(error)")
         }
         
         // データのリセット
         csvData = []
     }
     
+    // 停止ボタンを押した時の処理
     func stopMonitoring() {
-        // ここでセンサーの読み取りを停止するコードを書く。
-        // 加速度センサーの場合は、通常はCMMotionManagerのstopAccelerometerUpdates()メソッドを使用します。
+        // 加速度センサーを停止
         motionManager.stopAccelerometerUpdates()
         
-        // タイマーを停止します
+        // タイマーを停止
         timer?.invalidate()
         timer = nil
     }
     
+    // GPSデータを書き込む更新タイミングを更新
     func setSelectedTime(minutes: Int, seconds: Int) {
-        timeRemaining = minutes * 60 + seconds
+        self.timeRemaining = minutes * 60 + seconds
+        // 繰り返す時間を設定
+        self.defaultTimerCount = self.timeRemaining
     }
 }

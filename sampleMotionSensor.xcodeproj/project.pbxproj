@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		233FDE532A7BD8E2007928C3 /* AccelerationGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233FDE522A7BD8E2007928C3 /* AccelerationGraph.swift */; };
 		23851B3F2A792EFD00D05B1C /* sampleMotionSensorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23851B3E2A792EFD00D05B1C /* sampleMotionSensorApp.swift */; };
 		23851B412A792EFD00D05B1C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23851B402A792EFD00D05B1C /* ContentView.swift */; };
 		23851B432A792EFD00D05B1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23851B422A792EFD00D05B1C /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		233FDE522A7BD8E2007928C3 /* AccelerationGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationGraph.swift; sourceTree = "<group>"; };
 		23851B3B2A792EFD00D05B1C /* sampleMotionSensor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleMotionSensor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23851B3E2A792EFD00D05B1C /* sampleMotionSensorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleMotionSensorApp.swift; sourceTree = "<group>"; };
 		23851B402A792EFD00D05B1C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				23851B6D2A7930C700D05B1C /* SensorViewModel.swift */,
 				23C890AD2A7A870400FB178F /* LocationManager.swift */,
 				23C890B02A7A8A7800FB178F /* TimePickerView.swift */,
+				233FDE522A7BD8E2007928C3 /* AccelerationGraph.swift */,
 				23851B422A792EFD00D05B1C /* Assets.xcassets */,
 				23851B472A792EFD00D05B1C /* Persistence.swift */,
 				23851B492A792EFD00D05B1C /* sampleMotionSensor.xcdatamodeld */,
@@ -280,6 +283,7 @@
 				23C890B12A7A8A7800FB178F /* TimePickerView.swift in Sources */,
 				23851B412A792EFD00D05B1C /* ContentView.swift in Sources */,
 				23851B6E2A7930C700D05B1C /* SensorViewModel.swift in Sources */,
+				233FDE532A7BD8E2007928C3 /* AccelerationGraph.swift in Sources */,
 				23851B3F2A792EFD00D05B1C /* sampleMotionSensorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
