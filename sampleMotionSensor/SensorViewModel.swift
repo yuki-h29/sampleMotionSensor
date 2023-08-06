@@ -24,8 +24,12 @@ class SensorViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var isMoving: Bool = false
     @Published var isMovingCount: Int = 0 // 動いているカウント
     @Published var graphPoints: [Double] = []
+    var graphPointsX: [Double] = []
+    var graphPointsY: [Double] = []
+    var graphPointsZ: [Double] = []
+    var graphPointsCombined: [Double] = []
     
-    private var previousAccelerationX: Double? = nil // 以前のX軸の加速度値
+    private var previousAccelerationZ: Double? = nil // 以前のX軸の加速度値
     private var previousAccelerationSum: Double? = nil // 以前のX軸の加速度値
     
     override init() {
@@ -43,26 +47,28 @@ class SensorViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             print("Accelerometer is not available")
             return
         }
-        
+
         motionManager.accelerometerUpdateInterval = 0.1
-        
+
         motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
             if let acceleration = data?.acceleration {
                 DispatchQueue.main.async {
-                    if let previous = self.previousAccelerationSum {
-                        let change = abs(acceleration.z - previous) // X軸の変化量
-                        self.isMoving = change > 0.3 // 例: 変化量が0.05以上なら「動いている」と判断
-                        
+                    if let previous = self.previousAccelerationZ {
+                        let change = abs(acceleration.z - previous) // Z軸の変化量
+                        self.isMoving = change > 0.05 // 例: 変化量が0.05以上なら「動いている」と判断
+
                         // 合計加速度をグラフデータに追加
-                        self.graphPoints.append(self.accelerationZ)
-                        
+                        self.graphPointsX.append(acceleration.x)
+                        self.graphPointsY.append(acceleration.y)
+                        self.graphPointsZ.append(acceleration.z)
+                        self.combinedAcceleration = acceleration.x * acceleration.y * acceleration.z // 3つの値を掛けた合計加速度
+                        self.graphPointsCombined.append(self.combinedAcceleration)
                     }
-                    self.previousAccelerationX = acceleration.x
+                    self.previousAccelerationZ = acceleration.z
                     self.accelerationX = acceleration.x
                     self.accelerationY = acceleration.y
                     self.accelerationZ = acceleration.z
-                    self.combinedAcceleration = acceleration.x * acceleration.y * acceleration.z // 3つの値を掛けた合計加速度
-                    
+
                     if self.isMoving {
                         self.isMovingCount += 1
                     }
@@ -70,6 +76,7 @@ class SensorViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             }
         }
     }
+
     
     // 動いているFLGのカウント
     func resetMovingCount() {

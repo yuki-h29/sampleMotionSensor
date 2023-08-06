@@ -19,7 +19,19 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 10) {
             
-            AccelerationGraph(graphPoints: sensorViewModel.graphPoints).frame(height: 100)
+            AccelerationGraph(graphPointsX: sensorViewModel.graphPointsX,
+                                          graphPointsY: sensorViewModel.graphPointsY,
+                                          graphPointsZ: sensorViewModel.graphPointsZ,
+                                          graphPointsCombined: sensorViewModel.graphPointsCombined)
+                                          .frame(height: 100)
+            // 判例の表示
+            HStack {
+                LegendItem(color: Color.blue, text: "X")
+                LegendItem(color: Color.green, text: "Y")
+                LegendItem(color: Color.red, text: "Z")
+                LegendItem(color: Color.purple, text: "合計加速度")
+            }
+            
             // 上部: 緯度、経度表示
             VStack {
                 Text("緯度: \(sensorViewModel.latitude)")
@@ -119,6 +131,21 @@ private var stationaryText: some View {
         .background(Color.blue) // 背景色を青に
         .foregroundColor(.white) // 文字色を白に
         .padding(.top, 50) // 上部から50ポイントのスペースを取る
+}
+
+// 判例のアイテムを表示するView
+struct LegendItem: View {
+    var color: Color
+    var text: String
+    
+    var body: some View {
+        HStack {
+            Circle()
+                .fill(color)
+                .frame(width: 10, height: 10)
+            Text(text)
+        }
+    }
 }
 
 
